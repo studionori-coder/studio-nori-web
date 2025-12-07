@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    
+    <title>岐阜・各務原のAI・ITサポート＆SNS運用支援 | Studio Nori（スタジオノリ）</title>
+    <meta name="description" content="岐阜県各務原市を拠点に、AI活用、ITサポート、SNS運用支援、ナレーション制作・支援を行うStudio Noriです。SE歴26年の技術と、登録者2100人の発信力。「AI・IT・SNS・声」の4本柱で、あなたのビジネスをオンラインで全国サポートします（出張応相談）。">
+
+    <meta property="og:site_name" content="Studio Nori">
+    <meta property="og:title" content="Studio Nori | 岐阜・各務原のAI・ITサポート＆SNS運用支援">
+    <meta property="og:description" content="AI・IT・SNS・声の4本柱で、業務と発信を劇的に変える。SE歴26年のデジタル工房。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://studio-nori.vercel.app/">
+    <meta property="og:image" content="image_0.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Studio Nori",
+      "image": "image_1.png", 
+      "url": "https://studio-nori.vercel.app/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "各務原市",
+        "addressRegion": "岐阜県",
+        "addressCountry": "JP"
+      },
+      "description": "AI活用支援、ITサポート、SNS運用代行、ナレーション提供・支援、システム開発。原則オンライン対応。",
+      "founder": {
+        "@type": "Person",
+        "name": "Nori (シャチノリ)",
+        "jobTitle": "代表 / システムエンジニア / クリエイター"
+      }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ================= CSS Styles (サイバーパンク風デザイン定義) ================= */
+        :root {
+            --bg-color: #050a14;     /* 背景色：ダークネイビー */
+            --text-color: #e0e0e0;   /* 文字色：ライトグレー */
+            --accent-cyan: #00f2ff;  /* アクセント色1：ネオンシアン */
+            --accent-purple: #bc13fe;/* アクセント色2：ネオンパープル */
+            --font-heading: 'Orbitron', sans-serif; /* 見出し用フォント */
+            --font-body: 'Rajdhani', sans-serif;    /* 本文用フォント */
+        }
+        body {
+            margin: 0; padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.8;
+            overflow-x: hidden;
+            /* 背景のデジタルグリッドパターン */
+            background-image: 
+                linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        /* 見出しデザイン */
+        h1, h2, h3 { font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.05em; }
+        h2 {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-cyan);
+            padding-left: 20px;
+            margin-top: 60px; margin-bottom: 30px;
+            color: var(--accent-cyan);
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+        }
+        h3 { font-size: 1.3rem; color: var(--accent-purple); margin-top: 30px; margin-bottom: 15px; }
+        strong { color: var(--accent-cyan); }
+        a { color: var(--accent-cyan); text-decoration: none; transition: 0.3s; }
+        a:hover { text-shadow: 0 0 10px var(--accent-cyan); }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        
+        /* ヒーローセクション（トップ画像領域） */
+        .hero {
+            position: relative; width: 100%; height: 60vh; min-height: 400px;
+            overflow: hidden; border-bottom: 3px solid var(--accent-purple);
+        }
+        .hero-image { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7) contrast(1.1); }
+        .hero-overlay {
+            position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px 20px;
+            background: linear-gradient(to top, var(--bg-color), transparent);
+            text-align: center;
+        }
+        .hero-title { font-size: 2.5rem; margin: 0; color: #fff; text-shadow: 0 0 20px var(--accent-cyan); }
+        .hero-subtitle { font-size: 1.1rem; color: var(--accent-cyan); margin-top: 15px; font-weight: 600; }
+
+        /* コンテンツブロック（共通の箱のデザイン） */
+        .content-block {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            margin-bottom: 30px;
+        }
+        /* プロフィール用のレイアウト */
+        .profile-flex { display: flex; gap: 30px; align-items: flex-start; }
+        .profile-icon {
+            flex-shrink: 0; width: 120px; height: 120px; border-radius: 50%;
+            border: 3px solid var(--accent-cyan); overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+        }
+        .profile-icon img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* リストデザイン */
+        ul.tech-list li { margin-bottom: 10px; list-style: none; position: relative; padding-left: 25px; }
+        ul.tech-list li::before {
+            content: '>'; position: absolute; left: 0; color: var(--accent-purple); font-weight: bold;
+        }
+
+        /* 4本柱グリッドレイアウト（PC用） */
+        @media (min-width: 768px) {
+            .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+            .services-grid .content-block { margin-bottom: 0; height: 100%; box-sizing: border-box; }
+        }
+
+        /* Googleフォーム埋め込み用レスポンシブコンテナ */
+        .form-wrapper {
+            position: relative; width: 100%; overflow: hidden;
+            padding-top: 180%; /* スマホでの高さ比率（フォームの長さに合わせて調整） */
+            border: 1px solid rgba(0, 242, 255, 0.3); border-radius: 8px;
+        }
+        .form-wrapper iframe { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; border: none; }
+        /* PC画面での高さ調整 */
+        @media (min-width: 768px) { .form-wrapper { padding-top: 0; height: 1200px; } }
+        /* スマホ画面での調整 */
+        /* @media (max-width: 768px) { .profile-flex { flex-direction: column; align-items: center; } .hero-title { font-size: 1.8rem; } } */
+        /* ▼▼▼ スマホ画面での詳細な調整（ここを強化） ▼▼▼ */
+        @media (max-width: 768px) {
+            /* 文字サイズをスマホで見やすい大きさに調整 */
+            .hero-title { font-size: 1.8rem; line-height: 1.3; }
+            .hero-subtitle { font-size: 0.9rem; margin-top: 10px; }
+            h2 { font-size: 1.5rem; margin-top: 40px; padding-left: 15px; }
+            
+            /* プロフィール画像を縦並びに */
+            .profile-flex { flex-direction: column; align-items: center; text-align: center; }
+            
+            /* コンテンツの余白を少し狭くして画面を有効活用 */
+            .content-block { padding: 20px; }
+            .container { padding: 0 15px; }
+            
+            /* リストの文字を少し小さく */
+            ul.tech-list li { font-size: 0.95rem; }
+
+            /* Googleフォームの高さ調整（スマホだと縦長になるため高さを増やす） */
+            .form-wrapper { padding-top: 200%; } 
+        }
+        
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(0, 242, 255, 0.2); margin-top: 60px; font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <img src="image_0.png" alt="Studio Nori Main Visual" class="hero-image">
+        <div class="hero-overlay">
+            <div class="container">
+                <h1 class="hero-title">Studio Nori<br>技術と声で、業務と発信を劇的に変える。</h1>
+                <p class="hero-subtitle">SE歴26年×実績83件。「AI・IT・SNS・声」の4本柱でサポートするデジタル工房。</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="about">
+            <h2>ご挨拶 ～「ないものは、作ればいい」～</h2>
+            <div class="content-block profile-flex">
+                <div class="profile-icon">
+                    <img src="image_1.png" alt="Nori & Frieza">
+                </div>
+                <div>
+                    <p>はじめまして、「Studio Nori」代表のシャチノリ（Nori）です。<br>
+                    岐阜県各務原市を拠点に活動する、少し変わった経歴を持つシステムエンジニアです。</p>
+                    <p>普段はシステムエンジニアとして、企業の開発プロジェクトでシステム開発やIT教育を行っていますが、ココナラ等では「声の仕事」や「動画クリエイター」としても活動する、まさに<strong>「喋れるエンジニア」</strong>です。</p>
+                    <ul class="tech-list">
+                        <li>元ダンサー / タレント養成所出身</li>
+                        <li>SE歴26年超（Java/Oracle/.NET開発等）</li>
+                        <li>YouTube運営経験（登録者最高2100人達成）</li>
+                    </ul>
+                    <p>エンタメ活動で培ったコミュニケーション力で、専門用語を使わず、誰よりも分かりやすく・楽しくサポートすることをお約束します。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="service">
+            <h2>Studio Noriができること（4つの柱）</h2>
+            <p style="margin-bottom: 30px;">技術（左脳）とクリエイティブ（右脳）、両面からあなたのビジネスを加速させます。</p>
+
+            <div class="services-grid">
+                <div class="content-block">
+                    <h3>【AI】最新技術の活用支援</h3>
+                    <ul class="tech-list">
+                        <li><strong>AIプログラミング指導:</strong> CopilotやVSCodeを使った効率的な開発ノウハウを伝授（ココナラで教材提供中）。</li>
+                        <li><strong>業務へのAI導入:</strong> ChatGPT API等を活用した自動化ツールの設計・開発。</li>
+                        <li><strong>AIクリエイティブ:</strong> 画像生成AIによる素材制作やLINEスタンプ「Dr.ノリ」販売のノウハウ提供。</li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <h3>【IT】業務効率化・サポート</h3>
+                    <ul class="tech-list">
+                        <li><strong>自動化ツール開発:</strong> 毎日のルーチンワークをPython/VBAでワンクリック化。</li>
+                        <li><strong>パソコン・IT相談:</strong> 動作が遅いPCの改善、初期設定など、地域の「IT部」としてサポート。</li>
+                        <li><strong>システム開発全般:</strong> 大手プロジェクト経験を活かした、堅牢なシステム構築。</li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <h3>【SNS】SNS運用支援</h3>
+                    <ul class="tech-list">
+                        <li><strong>YouTube支援:</strong> 登録者2100人を達成した実践的なノウハウで、チャンネル運用をサポート。</li>
+                        <li><strong>マルチプラットフォーム展開:</strong> X(Twitter)、TikTok、Instagram、Noteなど、特性に合わせた発信戦略を提案。</li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <h3>【声】ナレーション・音声支援</h3>
+                    <ul class="tech-list">
+                        <li><strong>ナレーション提供:</strong> ココナラ実績83件。動画用ナレーションから、インパクトのあるキャラクターボイスまで。</li>
+                        <li><strong>ナレーション支援:</strong> 原稿作成のアドバイスや、伝わる話し方の演技指導など、声に関するお悩みをサポート。</li>
+                        <li><strong>動画編集:</strong> YMM4（ゆっくりムービーメーカー4）等を使用した、目を引く動画制作。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-block" style="border-color: var(--accent-purple); margin-top: 30px; background: rgba(188, 19, 254, 0.1);">
+                <h3 style="margin-top: 0; color: #fff;">💡 対応方法について</h3>
+                <p>
+                    原則として、すべてのサポートは<strong>オンライン（Zoom, Google Meet, チャットツール等）</strong>にて全国対応いたします。
+                </p>
+                <p style="font-size: 0.9rem; color: #ccc;">
+                    ※岐阜・各務原近郊で、お客様のご要望により現地への訪問（出張）が必要となる場合には、<strong>別途出張費（交通費実費＋移動拘束費）</strong>をご請求させていただきます。対応可否も含め、まずはご相談ください。
+                </p>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>確かな数字と、独自の強み</h2>
+            <div class="content-block">
+                <ul class="tech-list">
+                    <li><strong>圧倒的な技術バックボーン:</strong> SE歴26年超。「ないものは作ればいい」がモットー。</li>
+                    <li><strong>証明された発信力:</strong> YouTube登録者2,100人達成経験。Note執筆開始1ヶ月で1,200PV超。ココナラ音声部門実績83件。</li>
+                    <li><strong>親しみやすい人柄:</strong> 地元のサッカークラブ（グランパス・FC岐阜）、日本代表を愛し、「サカつく」愛好者です。難しい技術の話も分かりやすく翻訳します。趣味で「efootball(イーフト)」を遊んでおり、最高Dev4です。</li>
+                </ul>
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="https://potofu.me/kamao-zf" target="_blank" style="display: inline-block; border: 2px solid var(--accent-cyan); padding: 10px 20px; border-radius: 5px; text-decoration: none; transition: all 0.3s;">クリエイター活動のポートフォリオを見る (POTOFU)</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <div class="content-block">
+                <p style="text-align: center; margin-bottom: 30px;">
+                    「業務を自動化したい」「SNS運用の相談がしたい」など、まずはお気軽にお声がけください。<br>
+                    原則オンラインで全国対応いたします。
+                </p>
+                
+                <div class="form-wrapper" style="display: flex; justify-content: center; align-items: center; background: rgba(0,242,255,0.1); color: var(--accent-cyan);">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqKwuT3vgQDfT_1nQoax4oc5s4Urj79UavG4bVozKOLEXYNg/viewform?embedded=true" width="640" height="1197" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                </div>
+                </div>
+
+            <div class="content-block" style="border-color: var(--accent-purple); background: rgba(188, 19, 254, 0.1); margin-top: 30px;">
+                <h3 style="margin-top: 0; color: #fff;">🕒 活動時間・連絡について</h3>
+                <p style="font-size: 0.95rem;">
+                    本業（システムエンジニアリング）に従事しているため、平日の日中（月～金 8:30～17:30頃）はご連絡がつきにくくなっております。<br>
+                    主な活動・返信時間は以下の通りです。
+                </p>
+                <ul style="list-style: none; padding-left: 0; margin: 15px 0;">
+                    <li style="margin-bottom: 5px;"><strong style="color: var(--accent-cyan);">平日（月～金）:</strong> 20:00 以降</li>
+                    <li><strong style="color: var(--accent-cyan);">土日祝日:</strong> 終日対応可能</li>
+                </ul>
+                <p style="font-size: 0.9rem; color: #ccc;">
+                    ※本業の残業により平日の活動開始時間が前後する場合や、急遽休日対応が発生した場合は、返信が遅れる可能性がございます。あらかじめご了承ください。
+                </p>
+            </div>
+            </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--accent-cyan); margin-bottom: 10px;">STUDIO NORI</p>
+            <p>&copy; 2025 Studio Nori. All Rights Reserved. / Powered by 26 Years of Engineering Soul.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
