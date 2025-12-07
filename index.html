@@ -131,8 +131,7 @@
         .form-wrapper iframe { position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important; border: none; }
         /* PC画面での高さ調整 */
         @media (min-width: 768px) { .form-wrapper { padding-top: 0; height: 1200px; } }
-        /* スマホ画面での調整 */
-        /* @media (max-width: 768px) { .profile-flex { flex-direction: column; align-items: center; } .hero-title { font-size: 1.8rem; } } */
+        
         /* ▼▼▼ スマホ画面での詳細な調整（ここを強化） ▼▼▼ */
         @media (max-width: 768px) {
             /* 文字サイズをスマホで見やすい大きさに調整 */
@@ -152,6 +151,26 @@
 
             /* Googleフォームの高さ調整（スマホだと縦長になるため高さを増やす） */
             .form-wrapper { padding-top: 200%; } 
+
+            /* --- 追記修正部分：トップ画像出し分け用設定 --- */
+            
+            /* 1. ヒーローエリアの高さを縦長画像用に広げる */
+            .hero {
+                height: 85vh;       /* 画面高さの85% */
+                min-height: 600px;  /* 最低でも600px確保 */
+            }
+
+            /* 2. 画像の表示位置調整 */
+            .hero-image {
+                object-fit: cover;
+                object-position: center top; /* 上寄りを基準に表示 */
+                filter: none; /* スマホ用画像は明るさ調整などを解除（必要に応じて） */
+            }
+
+            /* 3. HTML上のタイトル文字を隠す（画像内の文字と被るため） */
+            .hero-overlay {
+                display: none;
+            }
         }
         
         footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(0, 242, 255, 0.2); margin-top: 60px; font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); }
@@ -160,7 +179,10 @@
 <body>
 
     <header class="hero">
-        <img src="image_0.png" alt="Studio Nori Main Visual" class="hero-image">
+        <picture>
+            <source media="(max-width: 768px)" srcset="image_2.png">
+            <img src="image_0.png" alt="Studio Nori Main Visual" class="hero-image">
+        </picture>
         <div class="hero-overlay">
             <div class="container">
                 <h1 class="hero-title">Studio Nori<br>技術と声で、業務と発信を劇的に変える。</h1>
